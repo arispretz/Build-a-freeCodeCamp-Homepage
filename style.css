@@ -1,0 +1,274 @@
+html {
+    background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEivryNN1iBNIGc3q2vDo-YuEywFmfnLxS4j2xvEkC0nSkqX-b1aAZOEzbqpyLw5SEEjr3MkFAhG42tPSM7j8gx7Ur55-_SrqGgVDHcEdUmrvHR_7bJDQwPswfezbIYnfXg8hkP6lL_h4ugjzTWt6_4tWz05ucQb7CRrKw1NX2kGXQoe4KIhTvkSHfKZbpwC/s1500/fcc-picture.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    padding: 0;
+    margin: 0;   
+}
+
+h1 {
+  align-text: center;
+  justify-content: center;
+  color: darkbrown;
+  weight: 900;
+}
+
+#title {
+  font-size: 2.2em;
+  padding-left: 12em;
+}
+
+:root {
+  --text-color: #000;
+  --base-bg: #ffa420;
+  --bg-btn: #FF7F50;
+  --bg-hdg: #9c9c9c;
+  --border: 3px solid #fff;
+  --box-shadow: 1px 1px 10px #000;
+  --padding: 10px;
+  --padding-sm: 5px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  color: var(--text-color);
+}
+
+#forum {
+  overflow-x: hidden;
+  opacity: 0.9;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 5%;
+  background: var(--bg-btn);
+  padding: var(--padding);
+  border: none;
+  cursor: pointer;
+  width: 125px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+button:hover,
+button:focus {
+  filter: brightness(125%);
+}
+
+.hide {
+  display: none !important;
+}
+
+#loader {
+  background: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  position: fixed;
+}
+
+#forum {
+  font-family: "Georama", sans-serif;
+}
+
+#refresh {
+  background: var(--base-bg);
+  border-bottom: var(--border);
+  padding: 15px 10px;
+}
+
+#hdg,
+.post {
+  display: grid;
+  grid-template-columns: 3% 70% repeat(3, 1fr);
+  padding: var(--padding);
+}
+
+#hdg {
+  background: var(--bg-hdg);
+}
+
+.post {
+  align-items: center;
+  border-top: var(--border);
+  width: 100vw;
+  background: var(--base-bg);
+}
+
+.post:hover,
+.post:focus {
+  filter: brightness(150%);
+}
+
+.rank {
+  font-size: 1.3em;
+}
+
+.wrap,
+.users {
+  display: flex;
+  align-items: center;
+}
+
+.topic {
+  font-size: 1.1em;
+}
+
+.replies,
+.views,
+.activity {
+  font-size: 1.05em;
+}
+
+.topic {
+  flex: 0.75;
+}
+.users {
+  flex: 0.25;
+  margin: auto;
+  flex-flow: row wrap;
+}
+
+.users img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.users img:hover,
+.users img:focus {
+  box-shadow: var(--box-shadow);
+}
+
+@media only screen and (max-width: 1249px) {
+  #hdg,
+  .post {
+    grid-template-columns: 5% 60% repeat(3, 1fr);
+  }
+
+  .users {
+    flex-direction: column;
+    flex-flow: column wrap;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  #hdg,
+  .post {
+    grid-template-columns: 5% 50% repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 735px) {
+  #forum {
+    font-size: 0.9em;
+  }
+
+  .users img {
+    width: 30px;
+    height: 30px;
+  }
+
+  button {
+    width: 120px;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  h1 {
+    font-size: 1em;
+  }
+
+  .post {
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  #hdg,
+  .post {
+    grid-gap: 5px;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  #forum {
+    font-size: 0.8em;
+  }
+
+  .users img {
+    width: 25px;
+    height: 25px;
+  }
+
+  button {
+    width: 110px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  #hdg {
+    font-size: 0.9em;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  #hdg {
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  #forum {
+    font-size: 0.7em;
+  }
+
+  button {
+    width: 105px;
+  }
+
+  #hdg,
+  .post,
+  button {
+    padding: var(--padding-sm);
+  }
+}
+
+@media only screen and (max-width: 335px) {
+  #hdg,
+  .post {
+    grid-template-columns: 5% 45% repeat(3, 1fr);
+  }
+}
+
+footer {
+    width: 100%;
+    background-color: pink;
+    text-align: left;
+    padding: 12px;
+    font-family: sans-serif;
+    border-top: 1px solid black;
+    box-shadow: 0px -4px 10px grey;  
+    justify-content: center;
+    text-align: center;
+}
+
+footer img {
+    width: 7em;
+    margin: -10px 10px;
+    float: left;
+}
